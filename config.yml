@@ -1,0 +1,45 @@
+backend:
+  name: github
+  repo: medokhodeery/aciernova-website
+  branch: main
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "content"
+    label: "Website Content"
+    files:
+      - name: "products"
+        label: "Products"
+        file: "content/products.yml"
+        fields:
+          - label: "English"
+            name: "en"
+            widget: "object"
+            fields:
+              - {label: "Engineering Steel", name: "engineering", widget: "text"}
+              - {label: "Tool Steel", name: "tool", widget: "text"}
+              - {label: "Non-Prime Steel", name: "nonprime", widget: "text"}
+          - label: "Arabic"
+            name: "ar"
+            widget: "object"
+            fields:
+              - {label: "Engineering Steel", name: "engineering", widget: "text"}
+              - {label: "Tool Steel", name: "tool", widget: "text"}
+              - {label: "Non-Prime Steel", name: "nonprime", widget: "text"}
+
+      - name: "offers"
+        label: "Current Offers"
+        file: "content/offers.yml"
+        fields:
+          - label: "Offers"
+            name: "offers"
+            widget: "list"
+            fields:
+              - {label: "Grade", name: "grade", widget: "string"}
+              - {label: "Form", name: "form", widget: "string"}
+              - {label: "Dimensions", name: "dimensions", widget: "string"}
+              - {label: "Quantity", name: "quantity", widget: "string"}
+              - {label: "Condition", name: "condition", widget: "string"}
+              - {label: "Origin", name: "origin", widget: "string"}
